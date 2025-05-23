@@ -5,14 +5,16 @@
     font-family: 'Garamond', cursive;
     font-size: 20px;
   }
-body {
+  body {
     background-color: #fff0f5;
-  color: #333;
-  scroll-behavior: smooth;
-}
-header {
-    background-color:#fef1f1;
-    padding: 2rem;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #fef1f1;
+    padding: 2rem 1rem;
     text-align: center;
   }
   .header-wrapper {
@@ -22,8 +24,9 @@ header {
     gap: 1rem;
   }
   header .logo {
-    width: 450px;
-    height: 140px;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
   }
   header .header-nav {
     display: flex;
@@ -36,150 +39,123 @@ header {
     color: #d63384;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
   }
-header h1 {
-  display: none;
-}
-nav {
-  display: none;
-}
-section {
-  padding: 3rem 2rem;
-}
-.section-title {
-  font-size: 2rem;
-  color: #d63384;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.about {
-  background-color: #fff0f5;
   
-  margin: 0 auto;
-}
-.treatments {
-  background-color: #fff0f5;
+  /* Oculta h1/nav se necessário */
+  header h1, nav {
+    display: none;
+  }
   
-  margin: 0 auto;
-}
-#contato {
-  background-color: #ffffff;
-}
-.mapa {
-  background-color: #fff0f5;
-}
-.about-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  text-align: left;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.about-content p {
-  flex: 1;
-  font-size: 1.1rem;
-  animation: fadeInRight 1.5s ease forwards;
-  opacity: 0;
-}
-.about-content img {
-  width: 470px;
-  height: auto;
-  border-radius: 100px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  animation: fadeInLeft 1.5s ease forwards;
-  opacity: 0;
-}
-@keyframes fadeInLeft {
-  from {
-    transform: translateX(-50px);
+  /* Seções */
+  section {
+    padding: 3rem 1rem;
+  }
+  .section-title {
+    font-size: 2rem;
+    color: #d63384;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* About */
+  .about,
+  .treatments,
+  #contato,
+  .mapa {
+    background-color: #fff0f5;
+    margin: 0 auto;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .about-content p {
+    flex: 1;
+    font-size: 1.1rem;
+    animation: fadeInRight 1.5s ease forwards;
     opacity: 0;
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes fadeInRight {
-  from {
-    transform: translateX(50px);
+  .about-content img {
+    width: 100%;
+    max-width: 470px;
+    border-radius: 100px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    animation: fadeInLeft 1.5s ease forwards;
     opacity: 0;
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
+  
+  /* Animações */
+  @keyframes fadeInLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
-}
-.treatment-slider {
+  @keyframes fadeInRight {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Slider */
+  .treatment-slider {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 1rem;
     padding: 1rem 0;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
   }
   .treatment-slider::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
   }
-  
   .treatment-card {
-    min-width: 200px;
+    min-width: 250px;
     flex: 0 0 auto;
     scroll-snap-align: start;
     background: white;
-    color:  #d63384;
+    color: #d63384;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     padding: 1rem;
     text-align: center;
   }
-.treatment-card img {
-  width: 100%;
-  height: 330px;
-  max-width: 450px;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-.btn-agendar {
-  display: inline-block;
-  background-color: #d63384;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 1rem;
-  font-family: 'Montserrat', sans-serif;
-}
-.btn-container {
-  text-align: center;
-  margin-top: 1rem;
+  .treatment-card img {
+    width: 100%;
+    height: auto;
+    max-height: 330px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
   
-}
-#contato{
-    background-color:#fff0f5;
-}
-footer {
-  background: #ffe4e1;
-  text-align: center;
-  padding: 2rem;
-  color: #d63384;
-}
-.map-container {
-  width: 100%;
-  height: 400px;
-  margin-top: 2rem;
-  text-align: center;
-}
-.map-container iframe {
-  width: 90%;
-  height: 100%;
-  border: none;
-  border-radius: 10px;
-}
-.btn-agendar::before {
+  /* Botões */
+  .btn-agendar {
+    display: inline-block;
+    background-color: #d63384;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .btn-agendar::before {
     content: "";
     display: inline-block;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg');
@@ -190,18 +166,22 @@ footer {
     margin-right: 10px;
     vertical-align: middle;
   }
+  .btn-container {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  /* Scroll botões */
   .treatment-slider-wrapper {
     position: relative;
     display: flex;
     align-items: center;
   }
-
-  
   .scroll-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10; /* Adicione isso */
+    z-index: 10;
     background-color: #d63384;
     border: none;
     padding: 0.5rem;
@@ -210,14 +190,14 @@ footer {
     border-radius: 50%;
     color: white;
   }
-  
   .scroll-btn.left {
     left: 0.5rem;
   }
-  
   .scroll-btn.right {
     right: 0.5rem;
   }
+  
+  /* Benefícios */
   .benefit-container {
     display: flex;
     flex-wrap: wrap;
@@ -225,9 +205,8 @@ footer {
     justify-content: center;
     margin-top: 2rem;
   }
-  
   .benefit-card {
-    background-color:  #ffffff;
+    background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 2rem;
@@ -236,40 +215,56 @@ footer {
     flex: 1 1 200px;
     transition: transform 0.3s ease;
   }
-  
   .benefit-card:hover {
     transform: translateY(-5px);
   }
-  
   .benefit-card img {
-    width: 190px;
-    height: 140px;
+    width: 100%;
+    max-width: 190px;
+    height: auto;
     margin-bottom: 1rem;
-    align-items: center;
-
   }
-  
   .benefit-card h3 {
     color: #d63384;
     font-size: 1.2rem;
     margin-bottom: 0.8rem;
     font-weight: bold;
   }
-  
   .benefit-card p {
     font-size: 0.95rem;
     color: #555;
   }
+  
+  /* Footer */
+  footer {
+    background: #ffe4e1;
+    text-align: center;
+    padding: 2rem;
+    color: #d63384;
+  }
+  .footer-logo {
+    width: 100%;
+    max-width: 190px;
+    height: auto;
+  }
+  .footer-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .footer-social {
     margin-top: 1rem;
   }
-  
   .footer-social p {
     color: #d63384;
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
-  
+  .footer-social a {
+    font-size: 15px;
+  }
   .btn-instagram {
     display: inline-flex;
     align-items: center;
@@ -282,27 +277,46 @@ footer {
     font-family: 'Montserrat', sans-serif;
     transition: background-color 0.3s ease;
   }
-  
   .btn-instagram img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
   }
-  
   .btn-instagram:hover {
     background-color: #b0256a;
   }
-  .footer-social a{
-    font-size: 15px;
+  
+  /* Mapa */
+  .map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+    text-align: center;
   }
-  .footer-logo {
-    width: 190px;
-    height: auto;
-    
+  .map-container iframe {
+    width: 90%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
   }
-  .footer-container{
-    display: flex;           /* Coloca os filhos lado a lado */
-  gap: 20px;               /* Espaço entre os itens (opcional) */
-  align-items: center;     /* Alinha verticalmente */
-  justify-content: center;
+  
+  /* Media Query para telas menores (mobile) */
+  @media (max-width: 768px) {
+    * {
+      font-size: 18px;
+    }
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    .treatment-card {
+      min-width: 80%;
+    }
+    .benefit-card {
+      max-width: 90%;
+    }
+    header .header-nav {
+      flex-direction: column;
+      gap: 1rem;
+    }
   }
