@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Garamond', cursive;
+    font-size: 20px;
+  }
+body {
+    background-color: #fff0f5;
+  color: #333;
+  scroll-behavior: smooth;
+}
+header {
+    background-color:#fef1f1;
+    padding: 2rem;
+    text-align: center;
+  }
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  header .logo {
+    width: 450px;
+    height: 140px;
+  }
+  header .header-nav {
+    display: flex;
+    gap: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  header .header-nav a {
+    color: #d63384;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.7rem;
+  }
+header h1 {
+  display: none;
+}
+nav {
+  display: none;
+}
+section {
+  padding: 3rem 2rem;
+}
+.section-title {
+  font-size: 2rem;
+  color: #d63384;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.about {
+  background-color: #fff0f5;
+  
+  margin: 0 auto;
+}
+.treatments {
+  background-color: #fff0f5;
+  
+  margin: 0 auto;
+}
+#contato {
+  background-color: #ffffff;
+}
+.mapa {
+  background-color: #fff0f5;
+}
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.about-content p {
+  flex: 1;
+  font-size: 1.1rem;
+  animation: fadeInRight 1.5s ease forwards;
+  opacity: 0;
+}
+.about-content img {
+  width: 470px;
+  height: auto;
+  border-radius: 100px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  animation: fadeInLeft 1.5s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.treatment-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 0;
+    scrollbar-width: none; /* Firefox */
+  }
+  .treatment-slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  .treatment-card {
+    min-width: 200px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    background: white;
+    color:  #d63384;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+  }
+.treatment-card img {
+  width: 100%;
+  height: 330px;
+  max-width: 450px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.btn-agendar {
+  display: inline-block;
+  background-color: #d63384;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+.btn-container {
+  text-align: center;
+  margin-top: 1rem;
+  
+}
+#contato{
+    background-color:#fff0f5;
+}
+footer {
+  background: #ffe4e1;
+  text-align: center;
+  padding: 2rem;
+  color: #d63384;
+}
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 2rem;
+  text-align: center;
+}
+.map-container iframe {
+  width: 90%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+.btn-agendar::before {
+    content: "";
+    display: inline-block;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .treatment-slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Adicione isso */
+    background-color: #d63384;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    color: white;
+  }
+  
+  .scroll-btn.left {
+    left: 0.5rem;
+  }
+  
+  .scroll-btn.right {
+    right: 0.5rem;
+  }
+  .benefit-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .benefit-card {
+    background-color:  #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 2rem;
+    max-width: 250px;
+    text-align: center;
+    flex: 1 1 200px;
+    transition: transform 0.3s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .benefit-card img {
+    width: 190px;
+    height: 140px;
+    margin-bottom: 1rem;
+    align-items: center;
+
+  }
+  
+  .benefit-card h3 {
+    color: #d63384;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .benefit-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  .footer-social {
+    margin-top: 1rem;
+  }
+  
+  .footer-social p {
+    color: #d63384;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    color: #d63384;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-instagram img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .btn-instagram:hover {
+    background-color: #b0256a;
+  }
+  .footer-social a{
+    font-size: 15px;
+  }
+  .footer-logo {
+    width: 190px;
+    height: auto;
+    
+  }
+  .footer-container{
+    display: flex;           /* Coloca os filhos lado a lado */
+  gap: 20px;               /* Espaço entre os itens (opcional) */
+  align-items: center;     /* Alinha verticalmente */
+  justify-content: center;
+  }
