@@ -1,14 +1,17 @@
+/* Reset e base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
-  body {
+  html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
     background-color: #fff0f5;
     color: #333;
-    scroll-behavior: smooth;
   }
   
   /* Cabeçalho */
@@ -16,19 +19,17 @@
     background-color: #fef1f1;
     padding: 0.5rem 1rem;
   }
-  
   .header-imagens {
     display: flex;
-    justify-content: space-between; /* Logo à esquerda, links à direita */
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }
-  
-  /* Logo principal */
   .logo {
-    width: 30vw;
+    width: 14vw;
     max-width: 200px;
     height: auto;
+    max-width: 100%;
   }
   
   /* Navegação */
@@ -40,7 +41,6 @@
     flex-wrap: wrap;
     flex: 1;
   }
-  
   .header-nav a {
     color: #8a5c3a;
     text-decoration: none;
@@ -48,53 +48,26 @@
     font-size: 1.1rem;
   }
   
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .header-imagens {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .logo {
-      width: 60vw;
-      max-width: none;
-      margin-bottom: 1rem;
-    }
-  
-    .header-nav {
-      justify-content: center;
-      gap: 1.5rem;
-    }
-  }
-  body, html {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Container da imagem */
-.banner-principal {
-    width: 100vw;
+  /* Banner */
+  .banner-principal {
+    width: 100%;
     overflow: hidden;
     position: relative;
   }
-  
-  /* Estilo da imagem */
   .banner-img {
-    width: 100%;           /* Ocupa toda a largura da tela */
-    height: auto;          /* Mantém a proporção original */
+    width: 100%;
+    height: auto;
     display: block;
+    object-fit: cover;
     max-width: 100%;
-    object-fit: cover;     /* Só útil se fosse background */
   }
-  
-  /* Para garantir boa aparência em dispositivos pequenos */
   @media (max-width: 768px) {
     .banner-img {
-      max-height: 70vh; /* impede de ocupar tela demais */
+      max-height: 70vh;
     }
   }
   
-  /* Oculta h1/nav se necessário */
+  /* Oculta elementos não usados */
   header h1, nav {
     display: none;
   }
@@ -105,26 +78,23 @@
   }
   .section-title {
     font-size: 1.5rem;
-    color: 	#8a5c3a;
+    color: #8a5c3a;
     margin-bottom: 1.5rem;
     text-align: center;
-    
   }
   
-  /* About */
-  .about,
-  .treatments,
-  #contato,
-  .mapa {
+  /* Sessões principais */
+  .about, .treatments, #contato, .mapa {
     background-color: #fff0f5;
     margin: 0 auto;
   }
+  
+  /* Sobre */
   .about-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    text-align: left;
     gap: 2rem;
     flex-wrap: wrap;
   }
@@ -145,27 +115,20 @@
   
   /* Animações */
   @keyframes fadeInLeft {
-    from {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+    from { transform: translateX(-50px); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
   }
   @keyframes fadeInRight {
-    from {
-      transform: translateX(50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+    from { transform: translateX(50px); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
   }
   
   /* Slider */
+  .treatment-slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
   .treatment-slider {
     display: flex;
     overflow-x: auto;
@@ -182,14 +145,14 @@
     flex: 0 0 auto;
     scroll-snap-align: start;
     background: #fff0f5;
-    color: 	#8a5c3a;
+    color: #8a5c3a;
     border-radius: 10px;
     padding: 1rem;
     text-align: center;
   }
   .treatment-card img {
     width: 85%;
-    height: 90%;
+    height: auto;
     max-height: 330px;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -204,8 +167,9 @@
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 1rem;
     font-family: 'Montserrat', sans-serif;
+    min-height: 44px;
+    min-width: 44px;
   }
   .btn-agendar::before {
     content: "";
@@ -223,12 +187,7 @@
     margin-top: 1rem;
   }
   
-  /* Scroll botões */
-  .treatment-slider-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
+  /* Botões scroll slider */
   .scroll-btn {
     position: absolute;
     top: 50%;
@@ -241,6 +200,8 @@
     font-size: 1.5rem;
     border-radius: 50%;
     color: white;
+    min-width: 44px;
+    min-height: 44px;
   }
   .scroll-btn.left {
     left: 0.5rem;
@@ -273,11 +234,11 @@
   .benefit-card img {
     width: 100%;
     max-width: 190px;
-    height: 35%;
+    height: auto;
     margin-bottom: 1rem;
   }
   .benefit-card h3 {
-    color: 	#8a5c3a;
+    color: #8a5c3a;
     font-size: 1.2rem;
     margin-bottom: 0.8rem;
     font-weight: bold;
@@ -287,12 +248,12 @@
     color: #555;
   }
   
-  /* Footer */
+  /* Rodapé */
   footer {
     background: #ffe4e1;
     text-align: center;
     padding: 2rem;
-    color: 	#8a5c3a;
+    color: #8a5c3a;
   }
   .footer-logo {
     width: 100%;
@@ -310,7 +271,7 @@
     margin-top: 1rem;
   }
   .footer-social p {
-    color: 	#8a5c3a;
+    color: #8a5c3a;
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
@@ -328,6 +289,8 @@
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     transition: background-color 0.3s ease;
+    min-height: 44px;
+    min-width: 44px;
   }
   .btn-instagram img {
     width: 20px;
@@ -352,14 +315,25 @@
     border-radius: 10px;
   }
   
-  /* Media Query para telas menores (mobile) */
-  @media (max-width: 768px) {
-    * {
-      font-size: 18px;
-    }
+  /* Responsividade */
+  @media (max-width: 992px) {
     .about-content {
       flex-direction: column;
       text-align: center;
+    }
+    .header-nav {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    * {
+      font-size: 1.125rem;
+    }
+    .logo {
+      width: 60vw;
+      margin-bottom: 1rem;
     }
     .treatment-card {
       min-width: 80%;
@@ -367,8 +341,36 @@
     .benefit-card {
       max-width: 90%;
     }
-    header .header-nav {
-      flex-direction: column;
-      gap: 1rem;
+    .map-container iframe {
+      width: 100%;
     }
   }
+  
+  @media (max-width: 480px) {
+    .btn-agendar {
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+    .section-title {
+      font-size: 1.2rem;
+    }
+    .logo {
+      width: 80vw;
+    }
+    .benefit-card, .treatment-card {
+      max-width: 100%;
+    }
+  }
+  
+  /* Dark mode opcional */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #222;
+      color: #eee;
+    }
+    header, .about, .treatments, .benefit-card, footer {
+      background-color: #333;
+      color: #fff0f5;
+    }
+  }
+  
