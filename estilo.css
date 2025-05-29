@@ -404,12 +404,7 @@
         height: 10px;
         margin-right: 10px;
       }
-      .logo {
-        width: 14vw;
-        max-width: 170px;
-        height: auto;
-        max-width: 100%;
-      }
+     
   }
 
   /* Botão hamburguer (mobile only) */
