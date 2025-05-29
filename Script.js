@@ -126,3 +126,9 @@ setInterval(() => {
   menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
   });
+
+  const banner = document.getElementsByClassName("banner-img");
+
+if (window.innerWidth <= 768) {
+  banner.src = "imagensLOGOTIPO/BannerMobile.png";
+}
