@@ -142,20 +142,23 @@
   }
   .treatment-card {
     width: 40%;
-    min-width: 200px;
+    min-width: 450px;
+    max-width: 300px; /* limite superior para manter padrão */
     flex: 0 0 auto;
     scroll-snap-align: start;
     background: #fff0f5;
     color: #8a5c3a;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
     font-size: 1.0rem;
   }
+  
+  /* Imagem com tamanho fixo */
   .treatment-card img {
-    width: 55%;
-    height: auto;
-    max-height: 320px;
+    width: 100%;
+    height: 320px;              /* altura fixa */
+    object-fit: cover;          /* preenche mantendo proporção */
     border-radius: 8px;
     margin-bottom: 1rem;
   }
@@ -235,8 +238,8 @@
   }
   .benefit-card img {
     width: 100%;
-    max-width: 190px;
-    height: auto;
+    max-width: 175px;
+    height: 40%;
     margin-bottom: 1rem;
   }
   .benefit-card h3 {
@@ -346,25 +349,33 @@
     }
   
     .about-content p {
-      font-size: 0.85rem;
+      font-size: 0.75rem;
     }
   
     .benefit-card p {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
     }
   
     .benefit-card h3 {
       font-size: 1rem;
     }
-  
-    footer p {
-      font-size: 0.8rem;
+    .treatment-card p{
+        font-size: 0.75rem;
     }
-    footer a {
-        font-size: 0.6rem;
+    .treatment-card h3{
+        font-size: 1rem;
+    }
+  
+    .footer-social p {
+      font-size: 4rem;
+    }
+    #Copy {
+        font-size: 3rem;
+    }
+    #contato p{
+        font-size: 0.75rem;
     }
   }
-  
   
   @media (max-width: 480px) {
     .btn-agendar {
@@ -381,38 +392,39 @@
       max-width: 100%;
     }
   }
-/* Botão hamburguer (mobile only) */
+  
+  /* Botão hamburguer (mobile only) */
 .menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #8a5c3a;
-  cursor: pointer;
-}
-
-/* Menu escondido por padrão no mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .header-nav {
     display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    background-color: #fef1f1;
-    padding: 1rem 0;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #8a5c3a;
+    cursor: pointer;
   }
-
-  .header-nav.active {
-    display: flex;
+  
+  /* Menu escondido por padrão no mobile */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .header-nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background-color: #fef1f1;
+      padding: 1rem 0;
+    }
+  
+    .header-nav.active {
+      display: flex;
+    }
+  
+    .header-nav a {
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+    }
   }
-
-  .header-nav a {
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
-  }
-}
-
+  
