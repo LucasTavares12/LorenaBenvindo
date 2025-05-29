@@ -375,24 +375,15 @@
     #contato p{
         font-size: 0.75rem;
     }
-  }
-  
-  @media (max-width: 480px) {
     .btn-agendar {
-      padding: 0.6rem 1rem;
-      font-size: 0.9rem;
-    }
-    .section-title {
-      font-size: 1.2rem;
-    }
-    .logo {
-      width: 80vw;
-    }
-    .benefit-card, .treatment-card {
-      max-width: 100%;
-    }
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+      .logo {
+        width: 60vw;
+      }
   }
-  
+
   /* Botão hamburguer (mobile only) */
 .menu-toggle {
     display: none;
@@ -427,4 +418,3 @@
       padding: 0.5rem 0;
     }
   }
-  
