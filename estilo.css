@@ -406,18 +406,18 @@
         margin-right: 10px;
       }
     .banner-principal {
-  width: 100%;
+  width: 100%;           /* Corrige o vazamento lateral */
   overflow: hidden;
   position: relative;
 }
 
 .banner-img {
-  width: 100%;
-  height: 60vh;
-  max-height: 600px;
+  width: 100%;           /* Preenche só até a borda da tela */
+  height: 50vh;          /* Altura mais confortável para celular */
   object-fit: cover;
   display: block;
 }
+
 
       .logo {
         width: 14vw;
