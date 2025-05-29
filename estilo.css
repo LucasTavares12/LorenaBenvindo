@@ -237,8 +237,8 @@
     transform: translateY(-5px);
   }
   .benefit-card img {
-    width: 100%;
-    max-width: 175px;
+    width: 90%;
+    max-width: 150px;
     height: 40%;
     margin-bottom: 1rem;
   }
