@@ -1,4 +1,4 @@
-/* Reset e base */
+* Reset e base */
 * {
     margin: 0;
     padding: 0;
@@ -187,6 +187,7 @@
     height: 20px;
     margin-right: 10px;
     vertical-align: middle;
+    align-items: center;
   }
   .btn-container {
     text-align: center;
@@ -383,12 +384,13 @@
         padding: 0.6rem 1rem;
         font-size: 0.9rem;
       }
-
+      .logo {
+        width: 60vw;
       }
       .btn-instagram {
         display: inline-flex;
         align-items: center;
-        background-color: white;
+        background-color: #fef1f1;
         color: #d63384;
         padding: 0.7rem 1.2rem;
         border-radius: 25px;
@@ -403,12 +405,11 @@
         width: 10px;
         height: 10px;
         margin-right: 10px;
-      }
- .banner-img {
+      }      
+      .banner-img {
         content: url('imagensLOGOTIPO/BannerMobile.png'); /* Caminho do banner para celular */
         height: 50vh; /* ajuste de altura opcional */
       }
-     
   }
 
   /* Botão hamburguer (mobile only) */
@@ -445,3 +446,4 @@
       padding: 0.5rem 0;
     }
   }
+  
