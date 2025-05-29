@@ -404,6 +404,10 @@
         height: 10px;
         margin-right: 10px;
       }
+ .banner-img {
+        content: url('imagensLOGOTIPO/BannerMobile.png'); /* Caminho do banner para celular */
+        height: 50vh; /* ajuste de altura opcional */
+      }
      
   }
 
