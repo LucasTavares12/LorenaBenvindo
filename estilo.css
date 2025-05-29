@@ -142,7 +142,7 @@
   }
   .treatment-card {
     width: 40%;
-    min-width: 410px;
+    min-width: 400px;
     max-width: 300px; /* limite superior para manter padrão */
     flex: 0 0 auto;
     scroll-snap-align: start;
@@ -415,6 +415,12 @@
         height: 50%;
         display: block;
         object-fit: cover;
+        max-width: 100%;
+      }
+      .logo {
+        width: 14vw;
+        max-width: 130px;
+        height: auto;
         max-width: 100%;
       }
   }
