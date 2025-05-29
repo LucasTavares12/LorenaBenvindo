@@ -367,10 +367,13 @@
     }
   
     .footer-social p {
-      font-size: 0.4rem;
+      font-size: 0.55rem;
+    }
+    .footer-social a{
+        font-size: 0.55rem;
     }
     #Copy {
-        font-size: 0.3rem;
+        font-size: 0.4rem;
     }
     #contato p{
         font-size: 0.75rem;
@@ -381,6 +384,25 @@
       }
       .logo {
         width: 60vw;
+      }
+      .btn-instagram {
+        display: inline-flex;
+        align-items: center;
+        background-color: white;
+        color: #d63384;
+        padding: 0.7rem 1.2rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        transition: background-color 0.3s ease;
+        min-height: 20px;
+        min-width: 20px;
+      }
+      .btn-instagram img {
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
       }
   }
 
