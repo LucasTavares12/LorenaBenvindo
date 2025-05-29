@@ -413,7 +413,7 @@
       display: none;
       flex-direction: column;
       width: 100%;
-      text-align: center;
+      text-align: left;
       background-color: #fef1f1;
       padding: 1rem 0;
     }
